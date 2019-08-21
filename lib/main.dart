@@ -13,30 +13,75 @@ void main() {
 
 Widget setBody() {
   return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
       //Profile 을 위한 CircleAvatar
-      Center(
-        child: CircleAvatar(
-          radius: 50.0,
-          backgroundImage: AssetImage('Images/my_image.png'),
-        ),
+      CircleAvatar(
+        radius: 50.0,
+        backgroundImage: AssetImage('Images/my_image.png'),
       ),
       Text(
         "Park JongSoon",
         style: TextStyle(
             fontFamily: 'dokdo',
-            fontSize: 14.0,
+            fontSize: 48.0,
             color: Colors.white,
             fontWeight: FontWeight.bold),
       ),
-
       Text(
         'Flutter Tutorial',
         style: TextStyle(
           fontFamily: 'NanumBold',
           fontSize: 14.0,
           color: Colors.teal.shade100,
+        ),
+      ),
+      Container(
+        color: Colors.white,
+        margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+        padding: EdgeInsets.all(10.0),
+        child: Row(
+          children: <Widget>[
+            Icon(
+                Icons.phone,
+                color: Colors.teal,
+            ),
+            SizedBox(
+              width: 10.0,
+            ),
+            Text(
+              '01033221214',
+              style: TextStyle(
+                color: Colors.teal.shade900,
+                fontFamily: 'NanumRegular',
+                fontSize: 20.0
+              ),
+            )
+          ],
+        ),
+      ),
+      Container(
+        color: Colors.white,
+        margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+        padding: EdgeInsets.all(10.0),
+        child: Row(
+          children: <Widget>[
+            Icon(
+              Icons.email,
+              color: Colors.teal,
+            ),
+            SizedBox(
+              width: 10.0,
+            ),
+            Text(
+              'jongsunday@naver.com',
+              style: TextStyle(
+                  color: Colors.teal.shade900,
+                  fontFamily: 'NanumRegular',
+                  fontSize: 20.0
+              ),
+            )
+
+          ],
         ),
       )
     ],
